@@ -8,6 +8,13 @@ const todo1: Todo = {
   deadline: new Date(2025, 0, 15, 1, 45), // 月のインデックスは0から始まるため、1月は0
 };
 
+const todo2: Todo = {
+  name: "基礎物理3の試験勉強",
+  priority: 2,
+  isDone: false,
+  deadline: new Date(2025, 0, 17, 1, 45),
+};
+
 const judge = (todo: Todo): void => {
   console.log(`Deadline timestamp: ${todo.deadline.getTime()}`); // デバッグ用にタイムスタンプを出力
   console.log(isOverdue(todo)); // isOverdue関数を使用して結果を出力
@@ -15,3 +22,4 @@ const judge = (todo: Todo): void => {
 };
 
 judge(todo1);
+judge(todo2);
