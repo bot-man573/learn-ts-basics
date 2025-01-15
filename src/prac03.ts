@@ -5,7 +5,7 @@ const todo1: Todo = {
   name: "基礎物理3の宿題",
   priority: 3,
   isDone: true,
-  deadline: new Date(2025, 0, 15, 1, 45),
+  deadline: new Date(2025, 0, 15, 1, 45), // 月のインデックスは0から始まるため、1月は0
 };
 
 const judge = (todo: Todo): void => {
