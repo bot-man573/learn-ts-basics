@@ -2,6 +2,7 @@ export {};
 import { Todo } from "./types"; // 型定義の読込み
 import dayjs from "dayjs";
 import weekday from "dayjs/plugin/weekday";
+import { printTodo } from "./utils/printTodo";
 
 const todo1: Todo = {
   name: "TypeScriptの勉強",
@@ -17,5 +18,5 @@ const todo2: Todo = {
   deadline: new Date(2024, 9, 10, 16, 0),
 };
 
-console.log(JSON.stringify(todo1, null, 2));
-console.log(JSON.stringify(todo2, null, 2));
+printTodo(todo1);
+printTodo(todo2);
