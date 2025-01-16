@@ -4,3 +4,5 @@ console.log("■ prac03.ts の実行");
 import "./prac03";
 console.log("■ comp.ts の実行");
 import "./comp";
+console.log("■ prac04.ts の実行");
+import "./prac04";
