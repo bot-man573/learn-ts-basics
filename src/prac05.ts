@@ -1,24 +1,17 @@
 export {};
-import { Todo } from "./types";
-import { printTodo } from "./utils/printTodo";
-import assert from "assert";
 
-const todo: Todo = {
-  name: "Learn TypeScript",
-  priority: 3,
-  isDone: false,
-  deadline: new Date(2024, 9, 11, 9, 45),
-};
+const numArr: number[] = [10, 11, 12, 13];
+console.log("初期状態 => " + numArr);
 
-// ここを編集
-const updatedTodo = {
-    ...todo,
-    isDone: true,
-    deadline: new Date(2024, 9, 30, 9, 45),
-};
+// 末尾に要素を追加
+const addedToEnd = [...numArr, 14]; // スプレッド構文
+console.log("末尾に要素を追加 => " + addedToEnd);
 
-// todo と updatedTodo の参照が「異なること」を念のために確認
-assert.notEqual(todo, updatedTodo);
+// 先頭に要素を追加
+const addedToStart = [9, ...numArr]; // スプレッド構文
+console.log("先頭に要素を追加 => " + addedToStart);
 
-// updatedTodo の内容を確認
-printTodo(updatedTodo);
+// n番目の位置に要素 (10.5) を挿入
+const n = 2;
+const insertedAtN = [...numArr.slice(0, n), 10.5, ...numArr.slice(n)];
+console.log(`${n}番目の位置に要素を挿入 => ` + insertedAtN);
